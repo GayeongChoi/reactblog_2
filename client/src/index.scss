@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+//reset
+@import "./assets/css/fonts";
+@import "./assets/css/reset";
+@import "./assets/css/common";
+
+//pages
+@import "./pages/home/home.scss";
+@import "./pages/login/login.scss";
+@import "./pages/register/register.scss";
+@import "./pages/setting/setting.scss";
+@import "./pages/single/single.scss";
+@import "./pages/write/write.scss";
+
+//components
+@import "./components/banner/banner.scss";
+@import "./components/footer/footer.scss";
+@import "./components/header/header.scss";
+@import "./components/post/post.scss";
+@import "./components/posts/posts.scss";
+@import "./components/sidebar/sidebar.scss";
+@import "./components/singlePost/singlePost.scss";
