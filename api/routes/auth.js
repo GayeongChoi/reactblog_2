@@ -25,15 +25,14 @@ router.post("/login", async (req, res) => {
     const user = await User.findOne({ username: req.body.username });
     !user && res.status(400).json("회원이 존재하지 않습니다.");
 
-    const valiodated = await bcrypt.compare(req.body.password, user.password);
-    !valiodated && res.status(400).json("회원이 존재하지 않습니다.");
+    const validated = await bcrypt.compare(req.body.password, user.password);
+    !validated && res.status(400).json("회원이 존재하지 않습니다.");
 
     const { password, ...others } = user._doc;
     res.status(200).json(others);
   } catch (err) {
     res.status(500).json(err);
   }
-  z;
 });
 
 module.exports = router;
